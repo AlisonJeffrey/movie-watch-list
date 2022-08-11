@@ -1,11 +1,13 @@
-<div>
-  <h1>Bookmark a new movie to the <%= @list.name %> watchlist</h1>
+<div class='container py-5'>
+  <h1>Bookmark a new movie to the <strong><%= @list.name %></strong> watchlist</h1>
+  <hr>
   <%= simple_form_for [@list, @bookmark] do |f| %>
     <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
     <%= f.association :movie, prompt: 'Select a movie' %>
-    <%= f.submit 'Add', class: 'btn btn-dark'%>
+    <%= f.submit 'Add movie', class: 'btn btn-dark'%>
   <% end %>
-  <%= link_to "Back to the list", list_path(@list) %>
+  <hr>
+  <%= link_to "Back to the '#{@list.name}' list", list_path(@list) %>
   <br>
-  <%= link_to "Back to the watchlist", lists_path %>
+  <%= link_to "Back to the watchlists", lists_path %>
 </div>
