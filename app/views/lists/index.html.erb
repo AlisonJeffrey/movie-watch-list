@@ -1,0 +1,9 @@
+<div>
+  <h1>I am the index lists page</h1>
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= list.name %></li>
+    <% end %>
+  </ul>
+  <%= link_to "Add a new watchlist", new_list_path %>
+</div>
