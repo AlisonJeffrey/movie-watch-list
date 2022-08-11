@@ -1,8 +1,9 @@
 <div>
-  <h1>I am the new lists page</h1>
+  <h1>Add a new watchlist</h1>
   <%= simple_form_for(@list) do |f| %>
-    <%= f.input :name %>
-    <%= f.submit %>
+    <%= f.input :name, placeholder: 'E.g. Films to watch with Kyle' %>
+    <%= f.input :image, as: :file %>
+    <%= f.submit 'Add', class: 'btn btn-dark'%>
   <% end %>
   <%= link_to "Back to the watchlists", lists_path %>
 </div>
