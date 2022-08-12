@@ -1,30 +1,34 @@
 <div class='container py-5'>
   <h1><%= @list.name %></h1>
   <hr>
-  <ul>
+  <div class="card-trip">
     <% if @list.movies.any? %>
       <% @list.movies.each do |movie| %>
-        <li>
-          <p><% bookmark = Bookmark.find_by(list: @list, movie: movie) %></p>
-          <p><%= image_tag movie.poster_url, alt: movie.title %></p>
-          <p><strong><%= movie.title.upcase %></strong></p>
-          <p><strong>Rating: </strong><%= movie.rating %></p>
-          <p><%= movie.overview %></p>
-          <p><strong>Comment: </strong><%= bookmark.comment %></p>
-          <p><%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %></p>
-        </li>
+        <%= image_tag movie.poster_url, alt: movie.title %>
       <% end %>
     <% end %>
-  </ul>
-  <%= "You haven't added any movies yet!" if @list.movies.empty? %>
-  <br>
-  <hr>
-  <%= link_to 'Add a movie to the list', new_list_bookmark_path(@list) %>
-  <br>
-  <%= link_to "Delete list",
-    list_path(@list),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?"}
-  %>
-  <br>
-  <%= link_to 'Back to the watchlists', lists_path %>
-</div>
+    <div>
+      <div class="card-trip-infos">
+        <% if @list.movies.any? %>
+          <% @list.movies.each do |movie| %>
+            <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+            <div>
+              <h2><strong><%= movie.title.upcase %></strong></h2>
+              <p><strong>Rating: </strong><%= movie.rating %></p>
+              <p><%= movie.overview %>
+                <p><strong>Comment: </strong><%= bookmark.comment %></p>
+                <p><%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %></p>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= "You haven't added any movies yet!" if @list.movies.empty? %>
+    <div>
+      <%= link_to 'Add a movie to the list', new_list_bookmark_path(@list) %>
+      <br>
+      <%= link_to "Delete list", list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?"} %>
+    </div>
+    <div><%= link_to 'Back to the watchlists', lists_path %></div>
+  </div>

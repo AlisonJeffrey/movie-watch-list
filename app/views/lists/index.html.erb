@@ -1,12 +1,21 @@
-<div class='container py-5'>
-  <h1>Your Watchlists</h1>
+<div class='container mt-5'>
+  <h1>My Movie Watchlist</h1>
   <hr>
-  <%#= cl_image_tag("san_francisco.jpg",
+</div>
+<div class='container py-5'>
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h3 class="mb-0">Lists</h3>
+    <%= link_to "Create a movie list", new_list_path, class: "btn btn-flat" %>
+  </div>
+  <div class="row">
+    <div class="card-product">
+      <%= cl_image_tag("https://res.cloudinary.com/dus7txcod/image/upload/v1660272458/khv8eak7gqadkkchj2i3.jpg",
       width: 400, height: 300, crop: :fill) %>
-  <ul>
-    <% @lists.each do |list| %>
-      <li><%= link_to list.name, list_path(list) %></li>
-    <% end %>
-  </ul>
-  <%= link_to "Add a new watchlist", new_list_path%>
+      <div class="card-product-infos">
+        <% @lists.each do |list| %>
+          <%= link_to list.name, list_path(list) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
