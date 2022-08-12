@@ -10,3 +10,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.container a {
+  color: $gray;
+  text-decoration: none;
+}
