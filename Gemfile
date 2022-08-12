@@ -67,6 +67,10 @@ end
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
 
+# Add simple form and font awesome
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
+
+# Add dot env (for security)
+gem 'dotenv-rails', groups: [:development, :test]
