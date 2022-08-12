@@ -3,7 +3,7 @@
   <hr>
   <%= simple_form_for(@list) do |f| %>
     <%= f.input :name, placeholder: 'E.g. Films to watch with Kyle' %>
-    <%= f.input :image, as: :file %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit 'Add', class: 'btn btn-dark'%>
   <% end %>
   <hr>

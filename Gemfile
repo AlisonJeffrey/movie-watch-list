@@ -74,3 +74,6 @@ gem "simple_form", github: "heartcombo/simple_form"
 
 # Add dot env (for security)
 gem 'dotenv-rails', groups: [:development, :test]
+
+# Add Cloudinary
+gem "cloudinary"

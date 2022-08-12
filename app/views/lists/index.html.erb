@@ -1,6 +1,8 @@
 <div class='container py-5'>
   <h1>Your Watchlists</h1>
   <hr>
+  <%#= cl_image_tag("san_francisco.jpg",
+      width: 400, height: 300, crop: :fill) %>
   <ul>
     <% @lists.each do |list| %>
       <li><%= link_to list.name, list_path(list) %></li>
