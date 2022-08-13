@@ -1,11 +1,11 @@
 <%# <div>
   <nav class="navbar navbar-dark bg-dark">
-    <span class="navbar-brand my-0 p-2 h1"><i class="fa-solid fa-couch"></i></span>
+    <span class="navbar-brand my-0 ms-3 h1"><i class="fa-solid fa-couch"></i></span>
   </nav>
 </div> %>
 <div class='container mt-5'>
   <h1><strong>We should watch that...</strong></h1>
-  <p>Never forget about a movie you want to watch again</p>
+  <p>Create your own movie list for every mood and never forget about a movie you want to watch again!</p>
   <hr>
 </div>
 <div class='container py-5'>
@@ -16,7 +16,7 @@
   <div class='container overflow-hidden'>
     <div class='row gx-5'>
       <% @lists.each do |list| %>
-        <div class="col-sm-6">
+        <div class="col-sm-12 col-lg-6">
           <div class="card-product my-4 mx-3">
             <%= image_tag list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>
             <div class="card-product-infos">
