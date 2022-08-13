@@ -1,11 +1,13 @@
 <div class='container py-5'>
   <h1>Bookmark a new movie to the <strong><%= @list.name %></strong> watchlist</h1>
   <hr>
-  <%= simple_form_for [@list, @bookmark] do |f| %>
-    <%= f.association :movie, prompt: 'Select a movie' %>
-    <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
-    <%= f.submit 'Add movie', class: 'btn btn-dark'%>
-  <% end %>
+  <div>
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.association :movie, prompt: 'Select a movie' %>
+      <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
+      <%= f.submit 'Add movie', class: 'btn btn-dark'%>
+    <% end %>
+  </div>
   <hr>
   <div class='container py-5 d-flex justify-content-center'>
     <ul class="list-inline">
