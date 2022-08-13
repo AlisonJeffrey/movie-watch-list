@@ -17,7 +17,7 @@
     <div class='row gx-5'>
       <% @lists.each do |list| %>
         <div class="col-sm-6">
-          <div class="card-product mt-5">
+          <div class="card-product my-4 mx-3">
             <%= image_tag list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>
             <div class="card-product-infos">
               <h2><%= link_to list.name, list_path(list) %></h2>
