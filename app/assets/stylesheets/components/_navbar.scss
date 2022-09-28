@@ -1,11 +1,9 @@
 .navbar-brand {
   justify-content: space-between;
 }
-
-// .navbar .navbar-collapse {
-//   flex-grow: 0;
-// }
-
-// .navbar .navbar-brand img {
-//   width: 40px;
-// }
+.navbar .navbar-collapse {
+  flex-grow: 0;
+}
+.navbar .navbar-brand img {
+  width: 40px;
+}
