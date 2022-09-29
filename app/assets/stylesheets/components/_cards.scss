@@ -12,19 +12,16 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
   }
 }
-
 .card-product img {
   height: 100%;
   width: 150px;
   object-fit: cover;
   margin: 0;
 }
-
 .card-product h2 {
   font-size: 24px;
   font-weight: bold;
 }
-
 // .card-product p {
 //   font-size: 12px;
 //   line-height: 1.4;
@@ -32,11 +29,9 @@
 //   margin-bottom: 0;
 //   margin-top: 8px;
 // }
-
 .card-product .card-product-infos {
   padding: 16px;
 }
-
 // For the show page:
 .card-trip {
   overflow: hidden;
@@ -48,26 +43,22 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
   }
 }
-
 .card-trip > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
   margin: 0;
 }
-
 .card-trip h2 {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-
 .card-trip p {
   font-size: 14px;
   opacity: .7;
   margin: 0;
 }
-
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
