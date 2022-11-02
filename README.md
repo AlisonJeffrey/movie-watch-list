@@ -4,7 +4,7 @@
 
 #### Landing page
 
-<img width="1728" alt="Screenshot 2022-09-29 at 13 59 17" src="https://user-images.githubusercontent.com/108048809/192942805-c87fab5d-36da-4c7c-baed-ff206eb00447.png">
+![image](https://user-images.githubusercontent.com/108048809/199498719-8a072ed0-4613-4076-b696-b5666477f320.png)
 
 #### Watch list
 
